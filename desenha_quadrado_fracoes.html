@@ -1,0 +1,36 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	function desenhaQuadrado(x, y, tamanho, cor) {
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	pincel.fillStyle = cor;
+	pincel.fillRect(x, y, tamanho, tamanho);
+	pincel.fillStroke = 'black';
+	pincel.strokeRect(x, y, tamanho, tamanho);
+	}
+
+
+
+	for(var x = 0; x<400; x = x+100){
+		if (x == 400*3/4) {
+			desenhaQuadrado(x, 0, 100, 'white');
+		} else {
+			desenhaQuadrado(x, 0, 100, 'green');
+		}
+	
+	}
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	pincel.font = '40px Georgia';
+	pincel.fillStyle = 'black';
+	pincel.fillText('A fração 3/4', 0, 200);
+	
+	
+	
+
+</script>
